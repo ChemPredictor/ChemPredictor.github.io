@@ -6,6 +6,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script type="text/javascript" src="js/JSDraw5.1.0/Service.aspx"></script>
 <script type="text/javascript" src="js/JSDraw5.1.0/Scilligence.JSDraw2.Pro.js"></script>
+<script type="text/javascript" src="js/JSDraw5.1.0/Scilligence.JSDraw2.Resources.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/dojo/1.11.2/dojo/dojo.js"></script>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/dojo/1.11.2/dojo/dojo.js"></script>
+<script type="text/javascript" src="js/JSDraw5.1.0/Scilligence.JSDraw2.Pro.js"></script>
+<script type="text/javascript" src="js/JSDraw5.1.0/Service.aspx"></script>
+<script type="text/javascript" src="js/JSDraw5.1.0/Scilligence.JSDraw2.Resources.js"></script>
+<script type="text/javascript" src="js/JSDraw5.1.0/Scilligence.JSDraw2.Resources.js"></script>
+
+
 <title>Reaction Predictor</title>
 
 <!-- Bootstrap -->
@@ -34,16 +45,14 @@
 </nav>
 
 
-<div id="Product"></div>
+<div class="Products" id="div1" skin="w8" style="width: 25%; height: 500px;border:1px solid gray" dataformat="xml" data="&lt;div version='1.3' class='JSDraw" app="JSDraw V3.0.0"></div>
+
+
 <script type="text/javascript">
-    scil.ready(function () {
-        var columns = {
-            structure: { label: "Structure", type: "jsdraw", required: true, width: 25% },
-            name: { label: "Compound Name", type: "input", required: true, width: 25% },
-        };
-        var form = new scil.Form();
-        form.render(scil.byId("Div1"), columns, { immediately: true });
-    });
+  dojo.addOnLoad(function () {
+  JSDraw2.defaultoptions.usechemdraw = true;
+  var jsd2 = new JSDraw("div1");
+  });
 </script>
 
 
