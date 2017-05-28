@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script type="text/javascript" src="js/JSDrawWS5.1.0/Service.aspx"></script>
-<script type="text/javascript" src="js/JSDrawWS5.1.0/Scilligence.JSDraw.js"></script>
+<script type="text/javascript" src="js/JSDraw5.1.0/Service.aspx"></script>
+<script type="text/javascript" src="js/JSDraw5.1.0/Scilligence.JSDraw2.Pro.js"></script>
 <title>Reaction Predictor</title>
 
 <!-- Bootstrap -->
@@ -25,13 +25,26 @@
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
     	<div id="title">
-		 <h1 style="align: center"> Organic Chemistry Reaction Predictor </h1>
+		 <h1> Organic Chemistry Reaction Predictor </h1>
 		</div>
     </div>
     <!-- /.navbar-collapse --> 
   </div>
   <!-- /.container-fluid --> 
 </nav>
+
+
+<div id="Product"></div>
+<script type="text/javascript">
+    scil.ready(function () {
+        var columns = {
+            structure: { label: "Structure", type: "jsdraw", required: true, width: 25% },
+            name: { label: "Compound Name", type: "input", required: true, width: 25% },
+        };
+        var form = new scil.Form();
+        form.render(scil.byId("Div1"), columns, { immediately: true });
+    });
+</script>
 
 
 
